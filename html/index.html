@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LXFS - Loadingscreen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="loading.css">
+</head>
+<body>
+
+<video id="myVideo" autoplay loop muted playsinline
+       style="position:fixed; right:0; bottom:0; min-width:100%; min-height:100%; z-index:-1;">
+    <source src="background.mp4" type="video/mp4">
+    Dein Browser unterstützt kein HTML Video.
+</video>
+
+<div class="logo-overlay">
+    <img src="Logo.png" alt="Logo">
+</div>
+
+<div class="container">
+    <div class="center-content">
+        <canvas id="performance-chart"></canvas>
+        <h1>Willkommen auf Cobra Life Roleplay!</h1>
+
+        <div class="music-control">
+            <button id="music-toggle">🎵 Musik aus</button>
+            <div class="music-progress">
+                <span id="current-time">0:00</span>
+                <input type="range" id="progress-bar" value="0" max="100">
+                <span id="duration">2:52</span>
+            </div>
+        </div>
+
+        <div class="loader-container">
+            <div class="loader"></div>
+        </div>
+    </div>
+
+    <div class="player-count"></div>
+</div>
+
+<audio id="background-music" autoplay loop volume="0.2">
+    <source src="song.mp3" type="audio/mpeg">
+    Dein Browser unterstützt das Audio-Element nicht.
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
