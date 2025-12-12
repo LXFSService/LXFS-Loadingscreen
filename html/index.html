@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LXFS - Loadingscreen</title>
+    <title>LXFS Loadingscreen</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="loading.css">
 </head>
 <body>
 
-<video id="myVideo" autoplay loop muted playsinline
-       style="position:fixed; right:0; bottom:0; min-width:100%; min-height:100%; z-index:-1;">
-    <source src="background.mp4" type="video/mp4">
-    Dein Browser unterstützt kein HTML Video.
-</video>
+<iframe id="myVideo" src="https://www.youtube.com/embed/FND0z4NF8Pg?autoplay=1&mute=1&loop=1&playlistFND0z4NF8Pg&controls=0&showinfo=0&modestbranding=1"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        style="position:fixed; right:0; bottom:0; min-width:100%; min-height:100%; z-index:-1;">
+</iframe>
 
 <div class="logo-overlay">
     <img src="Logo.png" alt="Logo">
@@ -22,8 +22,7 @@
 <div class="container">
     <div class="center-content">
         <canvas id="performance-chart"></canvas>
-        <h1>Willkommen auf Cobra Life Roleplay!</h1>
-
+        <h1>Willkommen auf Server Name!</h1>
         <div class="music-control">
             <button id="music-toggle">🎵 Musik aus</button>
             <div class="music-progress">
@@ -32,18 +31,17 @@
                 <span id="duration">2:52</span>
             </div>
         </div>
-
+        
         <div class="loader-container">
             <div class="loader"></div>
         </div>
     </div>
-
     <div class="player-count"></div>
 </div>
 
-<audio id="background-music" autoplay loop volume="0.2">
+<audio id="background-music" autoplay loop>
     <source src="song.mp3" type="audio/mpeg">
-    Dein Browser unterstützt das Audio-Element nicht.
+    Your browser does not support the audio element.
 </audio>
 
 <script src="script.js"></script>
