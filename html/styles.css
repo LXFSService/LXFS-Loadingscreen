@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300..700&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('background.mp4') no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Rubik Bubbles", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+.scroll-container {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.scroll-container:hover {
+    overflow-y: scroll;
+}
+
+.scroll-container::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.story-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+
+.dropdown-button {
+    background: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.dropdown-button:hover {
+    background: #555353;
+}
+
+
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    height: 90%;
+    
+    border-radius: 10px;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.team-left, .team-right {
+    width: 25%;
+    padding: 20px;
+    background: rgba(6, 12, 19, 0.815);
+    transition: background 0.3s ease-in-out;
+}
+
+.team-left:hover, .team-right:hover {
+    background: rgba(6, 12, 19, 0.815);
+}
+
+.center-content {
+    font-family: "Poppins", serif;
+    font-weight: 250;
+    font-style: normal;
+    width: 500%;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.loadingAnimation {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    animation: particles 1.5s infinite;
+}
+
+@keyframes colorChange {
+    0%, 100% {
+        background-color: #EFEFFA;
+    }
+    50% {
+        background-color: #FFB6C1;
+    }
+}
+
+#message {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+canvas {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.music-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+}
+
+
+.music-control button,
+.music-control button:after {
+  width: 150px;
+  height: 76px;
+  line-height: 78px;
+  font-size: 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  background: linear-gradient(45deg, transparent 5%, #050b13 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #050b13;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.music-control button:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: 'CNW-ROLEPLAY';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #050b13 3%, #050b13 5%, #FF013C 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #050b13;
+  clip-path: var(--slice-0);
+}
+
+.music-control button:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .music-control button,
+  .music-control button:after {
+    width: 200px;
+    height: 86px;
+    line-height: 88px;
+  }
+}
+
+.music-progress {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.music-progress span {
+    margin: 0 10px;
+}
+
+.music-progress input[type="range"] {
+    width: 300px;
+}
+
+.player-count {
+    margin-top: 10px;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    margin: 10px 0;
+}
+
+.logo-overlay {
+    width: 15vw;
+    height: 15vw;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+}
+
+.logo-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    x-height: 80%;
+}
